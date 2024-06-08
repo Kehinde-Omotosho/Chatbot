@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/static/navstyle.css">
+    <style>
+        /* Contact Us Page Styles */
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #F5F5F5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-container h2 {
+            margin-bottom: 20px;
+            color: #3C4043;
+            text-align: center;
+        }
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-container label {
+            margin-bottom: 5px;
+            color: rgb(87, 85, 85);
+        }
+        .contact-container input,
+        .contact-container textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-container .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .contact-container .checkbox-group input {
+            margin-right: 10px;
+        }
+        .contact-container button {
+            padding: 10px 20px;
+            background-color: #3C4043;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-container button:hover {
+            background-color: #1f2325;
+            color: #ffffff;
+        }
+        .contact-info {
+            margin-top: 30px;
+            color: #555;
+        }
+
+        footer {
+    background-color:  #3C4043;
+    padding: 20px 20px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 200px;
+
+}
+
+.location-img {
+    width: 100px;
+    height:120px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#f_container{
+    display:flex;
+    justify-content: center;
+    gap: 100px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-item"><a href="{{ url_for('index') }}">Home</a></div>
+        <div class="nav-item"><a href="{{ url_for('about') }}">About Us</a></div>
+        <div class="nav-item"><a href="#contact">Contact</a></div>
+        <div class="nav-item"><a href="#trainers">Trainers</a></div>
+        <div class="nav-item"><a href="#faqs">FAQs</a></div>
+    </div>
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form action="{{ url_for('submit_contact') }}" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <!-- New Checkbox Group -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="is_member" name="is_member" value="yes">
+                <label for="is_member">Are you a member of the fitness community?</label>
+            </div>
+            
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email: contact@fitfusionhub.com</p>
+            <p>Phone: +1 234 567 890</p>
+            <p>Address: FitFusion Hub, 123 Wellness Way, Texas City, FL 56789</p>
+            <p>United States of America</p>
+        </div>
+    </div>
+
+    <footer>
+        <div id="f_container">
+            <div class="container2">
+                <img src="/static/uploads/location_icon.png" alt="Location Icon" class="location-img"/>
+                <h3>United States of America</h3>
+                <h4>FitFusion Hub<br/>123 Wellness Way<br/>Texas City, FL 56789</h4>
+            </div>  
+
+            <div class="container2" style="margin-top: -25px;">
+                <img src="/static/uploads/email-icon.png" alt="Location Icon" class="location-img"/>
+                <h3>Email</h3>
+                <h4>contact@fitfusionhub.com</h4>
+            </div>  
+        </div>
+        <p style="font-size: 14px;">fitfusion.com</p>
+    </footer>
+    
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

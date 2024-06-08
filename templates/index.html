@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFusion</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/navstyle.css">
+    <link rel="stylesheet" href="/static/brand.css">
+</head>
+
+<body>
+    
+<div class="navbar">
+        <div class="nav-logo">
+            <a href="{{ url_for('index') }}">
+                <img class="nav_img" src="/static//uploads//b_logo.png" alt="Logo"/>
+            </a>
+        </div>
+    <div class="nav_section">
+    <div class="nav-item"><a href="./index.html">Home</a></div>
+    <div class="nav-item"><a href="./about.html">About US</a></div>
+    <div class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></div>
+    <div class="nav-item"><a href="#trainers">Trainers</a></div>
+    <div class="nav-item"><a href="#faqs">FAQs</a></div>
+    </div>
+    
+</div>
+
+    <div>
+        <div class="background-div">
+            <div class="section1">
+                <p class="text1">Leveraging Community Support to Achieve Your Fitness Goals</p>
+                <p class="text2">FitFusion goes beyond workouts. It's a supportive fitness app that connects you with a community for motivation, shared challenges, and expert advice. Together, we'll reach your goals and celebrate each other's wins.</p>
+                <div class="button_container">
+                    <button class="button1">Take a fitness assessment</button>
+                    <p class="text3">to join us</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="chat-image">
+                <img class="bot-image" src="/static/uploads/picture-3.jpg">
+            </div>
+            
+            <div class="chat-title">
+                <header>
+                    <h3 class="bot-title">FitBuddy</h3>
+                </header>
+            </div>
+            
+            <div class="chat-box" id="chat-box"></div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button class="button2" onclick="sendMessage()">Send</button>
+        </div>
+    
+    </div>
+
+
+    <footer>
+        <div id="f_container">
+            <div class="container2">
+                <img src="/static/uploads/location_icon.png" alt="Location Icon" class="location-img"/>
+                <h3>United States of America</h3>
+                <h4>FitFusion Hub<br/>123 Wellness Way<br/>Texas City, FL 56789</h4>
+            </div>  
+
+            <div class="container2" style="margin-top: -25px;">
+                <img src="/static/uploads/email-icon.png" alt="Location Icon" class="location-img"/>
+                <h3>Email</h3>
+                <h4>contact@fitfusionhub.com</h4>
+            </div>  
+        </div>
+        <p style="font-size: 14px;">fitfusion.com</p>
+    </footer>
+    
+   
+    <script src="/static/script.js"></script>
+</body>
+</html>

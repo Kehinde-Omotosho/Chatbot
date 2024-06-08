@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/static//navstyle.css">
+    <style>
+       body {
+        width: 100%;
+        margin-inline: auto;
+       }
+        
+        /* CSS styles for the About Us page */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:#3C4043;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            top: 50px;
+            position: relative;
+            margin-bottom: 100px;
+            color: #ffffff;
+        }
+
+        h2 {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h2 .about {
+            color: #3C4043;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        span {
+            text-decoration: underline;
+            color: #0077FF;
+        }
+
+        span:hover {
+            color: blue;
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 5rem;
+            width: 90%;
+            padding-left: 15px;
+            
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 2rem;
+            text-align: center;
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 3;
+        }
+
+        footer {
+    background-color:  #3C4043;
+    padding: 20px 20px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 200px;
+
+}
+
+.location-img {
+    width: 100px;
+    height:120px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#f_container{
+    display:flex;
+    justify-content: center;
+    gap: 100px;
+    }
+
+       
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-item"><a href="{{ url_for('index') }}">Home</a></div>
+        <div class="nav-item"><a href="#about">About Us</a></div>
+        <div class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></div>
+        <div class="nav-item"><a href="#trainers">Trainers</a></div>
+        <div class="nav-item"><a href="#faqs">FAQs</a></div>
+    </div>
+
+    <div class="container">
+        <h2>About FitFusion</h2>
+    <p>
+        Welcome to FitFusion, where fitness meets community and empowerment. At FitFusion, we believe that everyone deserves access to a supportive and inclusive fitness environment that empowers them to achieve their goals, no matter their background or fitness level.
+    </p>
+    <p>
+        Our mission is simple: to unite individuals in their pursuit of wellness, transform lives through fitness, and help our members thrive both inside and outside the gym. We're more than just a fitness platform; we're a vibrant community of like-minded individuals who are committed to supporting each other on their journey to health and happiness.
+    </p>
+    <p>
+        With a diverse range of fitness modalities, expert guidance, and personalized support, FitFusion is your partner in fitness success. Whether you're looking to lose weight, build muscle, improve your overall health, or simply connect with others who share your passion for fitness, you'll find everything you need to reach your goals right here.
+    </p>
+    <p>
+        But FitFusion is more than just a workout platform; it's a lifestyle. We're dedicated to empowering our members to live their best lives, both inside and outside the gym. From nutrition guidance to mindset coaching, we provide holistic support to help you achieve balance, vitality, and fulfillment in every aspect of your life.
+    </p>
+    <p>
+        Join us at FitFusion and become part of a community that's committed to helping you become the best version of yourself. Together, we'll unite, transform, and thrive. Your first step to joining us is taking our <span>fitness assessment</span>
+    </p>
+    </div>
+
+    <div>
+        <div>
+            <h2>Testimonials</h2>
+        </div>
+
+        <div class="wrapper">
+            <div class="box">
+                <h3>Anthony Wise</h3>
+                <p>
+                    Joining FitFusion has been life-changing. My trainer, Amanda, guided me through a critical time, helping me build strength and reclaim my health. The dedication of the expert trainers is unmatched, making every session a rewarding experience. It's been over two years now, and I can't imagine my fitness journey without FitFusion. 
+                </p>
+                <img src="/static/uploads/testimonial.jpg" alt="Customer Testimonials" />
+            </div>
+            <div class="box">
+                <h3>Marcus & Marta Aurelius</h3>
+                <p>
+                    FitFusion has been a game-changer for us as an older married couple. Training from home hasn't reduced the value or effort of our coaches one bit. With their guidance, we've improved our fitness and strengthened our bond. The progress we've made together, both physically and emotionally, is incredible. FitFusion has truly revitalized our lives, and we couldn't be happier with the results.
+                </p>
+                <img src="/static/uploads/testimonial2.jpg" alt="Customer Testimonials" />
+            </div>
+            <div class="box">
+                <h3>Gustav Danilyuk</h3>
+                <p>
+                    Engaging in group trainings has been amazing. The support and accountability from the community has kept me on track, and the fitness challenges are incredibly motivating. I've made great progress thanks to the encouragement and camaraderie. FitFusion has truly been pivotal in my fitness journey. 
+                </p>
+                <img src="/static/uploads/testimonial3.jpg" alt="Customer Testimonials" />
+            </div>
+            <div class="box">
+                <h3>David Cellman</h3>
+                <p>
+                    I saw an ad for FitFusion and decided to try it. The personalized nutrition plan and calorie tracking have been incredibly helpful. I've gained a better understanding of my eating habits and made great progress toward my fitness goals. The support and resources are exceptional, and I'm thrilled with the results.
+                </p>
+                <img src="/static/uploads/testimonial4.jpg" alt="Customer Testimonials" />
+            </div>
+        </div>
+          
+    </div>
+
+    <footer>
+        <div id="f_container">
+            <div class="container2">
+                <img src="/static/uploads/location_icon.png" alt="Location Icon" class="location-img"/>
+                <h3>United States of America</h3>
+                <h4>FitFusion Hub<br/>123 Wellness Way<br/>Texas City, FL 56789</h4>
+            </div>  
+
+            <div class="container2" style="margin-top: -25px;">
+                <img src="/static/uploads/email-icon.png" alt="Location Icon" class="location-img"/>
+                <h3>Email</h3>
+                <h4>contact@fitfusionhub.com</h4>
+            </div>  
+        </div>
+        <p style="font-size: 14px;">fitfusion.com</p>
+    </footer>
+
+</body>
+</html>

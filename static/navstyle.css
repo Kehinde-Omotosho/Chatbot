@@ -1,0 +1,61 @@
+/*/* Navbar styles */
+.navbar {
+    background-color: #3C4043; /* Navbar background color */ 
+    overflow: hidden; /* Clear floats */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav_img {
+    width: 160px;
+    height: 90px;
+    margin: 0;
+}
+
+.nav_section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* Navbar item styles */
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar link styles */
+.nav-item a {
+    color: #ffffff; /* Link text color */
+    text-align: center; /* Center-align the text */
+    padding: 10px 20px; /* Padding for better clickable area */
+    text-decoration: none; /* Remove default underline */
+}
+
+/* Change the color of navbar links on hover */
+.nav-item a:hover {
+    background-color: #F1F3F4; /* Hover background color */
+    color: #000000; /* Hover text color */
+}
+
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+}
+
+
+
